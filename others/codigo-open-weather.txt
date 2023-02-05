@@ -1,0 +1,16 @@
+Código Open Weather:
+
+f20068aaf510fa4a3ca07640b1a2425e
+
+
+/* https://api.openweathermap.org/data/2.5/weather?lat=&{lat}&lon=&{lon}&units=metric&lagn=pt-br&appid=${api_key} */
+
+
+//https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lagn=pt-br&appid=${api_key} lat={lat}&lon={lon}&appid={API key}
+
+
+/* função anônima: convertendo s dados da api */
+        .then((data) => displayWeather(data))  
+
+
+/* função anônima: convertendo s dados da api */

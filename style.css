@@ -1,0 +1,169 @@
+* {   /* '*' seleciona todos os elementos do HTML. Propiedades abaixo para retirar a margim e o preenchimento que o navegar gera para o site */
+    margin: 0;  /* espaçamento externo */
+    padding: 0; /* espaçamento interno */
+}
+
+body {    /* seleção direta, sem ponto. Aplica o estilo em todos os elementos do 'body'. */
+    background: #f3f4fb;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased; /* propriedade que deixa as fontes mais bonitas e definidas no Chrome */
+}
+
+.header, .temperature-details, .sunset-sunrise {  /* FALTOU ESSA PROPRIEDADE. seleção com o '.' é para chamar uma class. Aplica o estilo somente na classe. */
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+.header {
+    padding: 0 30px;
+    border: 0; /**/
+}
+
+.header__city-search-bar {
+    display: flex; /* para deixar o bloco flexível */
+    justify-content: center; /* centralizar os elementos. Só é possível usar essa propriedade por causa de display flex */
+    margin-top: 30px;
+    align-items: center;
+}
+
+.header__input {
+    border: none;
+    width: 100%; /* Propriedade para preencher o espaço do bloco em 100% */
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 10px 0 0 10px; /* Propriedade para arredondar os cantos do campo */
+    appearance: none; /* Propriedade para melhorar a aparência no iphone */
+    margin-right: -15px;
+}
+
+.header__button {
+    cursor: pointer; /* Propriedade que muda o cursor para mãozinha quando passa por cima do botão */
+    min-width: 50px;
+    min-height: 50px;
+    border: none;
+    border-radius: 100%;
+    background: #393939;
+    color: #f3f4fb;
+    display: flex;
+    align-items: center; /* Propriedade para centralizar conteúdo dentro de um elemento. Só é possível usar essa propriedade por causa de display flex. */
+    justify-content: center; /* Propriedade para centralizar conteúdo dentro de um elemento. Só é possível usar essa propriedade por causa de display flex. */
+    transition: 0.2s; /* Propriedade para dar um efeito de clarear quando o cursor passa pelo botão */
+    box-shadow: 
+    rgba(50, 50, 93, 0.25) 0px, 13px, 27px, -5px,
+        rgba(0, 0, 0, 0.3) 0px, 8px, 16px, -8px;
+}
+
+.header__button:hover { /* Propriedade para dar um efeito de clarear quando o cursor passa pelo botão */
+    filter: brightness(1.25);
+}
+
+.header__current-date, 
+.header__city-name {
+    font-family: "Ubuntu", sans-serif;
+}
+
+.header__current-date {
+    color: #a2a2be;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.header__city-name {
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 6px;
+}
+
+/* CURRENT TEMPERATURE */
+
+.current-temperature {
+    display: flex;
+    flex-direction: column; /* Coloca todos os elementos em uma coluna só. */
+    align-items: center;
+    margin-top: 30px;
+}
+
+.current-temperature__weather-icon { 
+    width: 125px;
+    margin-top: 15px;
+}
+
+.current-temperature__description:first-letter { /* Para colocar a primeira letra maiúscula */
+    text-transform:uppercase;
+}
+
+.current-temperature__description {
+    color: #b6aef0;
+    font-weight: 500;
+    font-size: 24px;
+    margin-top: 30px;
+}
+
+.current-temperature__info-label {
+    margin-top: 15px;
+    color: #a2a2be;
+}
+
+.current-temperature__current-temperature {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* BOTTOM CONTAINER */
+
+.bottom-container {
+    background: #fff;
+    position: absolute; /* Permite o controle total sobre o elemento */
+    bottom: 0; /* Posição 0, só é possivel por causa do position  */
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+    box-shadow: /* Para colocar sombra */
+    rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.temperature-details {
+    display: flex;
+    margin-top: 30px;
+}
+
+.temperature-details__item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #a2a2be;
+}
+
+.temperature-details__item :last-child { /* Para eliminar a propriedade do último elemento */
+    border: none;
+}
+
+.temperature-details__label {
+    color: #a2a2be;
+}
+
+.temperature-details__value,
+.sunset-sunrise__value {
+    font-weight: 500;
+    margin-top: 7px;
+}
+
+/* SUN */
+
+.sunset-sunrise {
+    display: flex;
+    margin: 30px auto;/**/
+}
+
+.sunset-sunrise__item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* BEM - Block Element Modifier; padrão utilizado pelo mercado para nomear as classes (1º nome do bloco, 2º nome do elemento, 3º não foi usado neste projeto. */
